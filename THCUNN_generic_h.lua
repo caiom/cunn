@@ -1,4 +1,4 @@
-#ifndef THC_GENERIC_FILE
+return [[#ifndef THC_GENERIC_FILE
 #define THC_GENERIC_FILE "generic/THCUNN.h"
 #else
 
@@ -1087,11 +1087,9 @@ TH_API void THNN_(VolumetricDilatedMaxPooling_updateGradInput)(
                   THCTensor *gradOutput,
                   THCTensor *gradInput,
                   THCIndexTensor *indices,
-                  int kT, int kW, int kH,
                   int dT, int dW, int dH,
                   int padT, int padW, int padH,
-                  int dilationT, int dilationW, int dilationH,
-                  bool ceilMode);
+                  int dilationT, int dilationW, int dilationH);
 
 TH_API void THNN_(VolumetricFullConvolution_updateOutput)(
                   THCState *state,
@@ -1146,10 +1144,8 @@ TH_API void THNN_(VolumetricMaxPooling_updateGradInput)(
                   THCTensor *gradOutput,
                   THCTensor *gradInput,
                   THCIndexTensor *indices,
-                  int kT, int kW, int kH,
                   int dT, int dW, int dH,
-                  int padT, int padW, int padH,
-                  bool ceilMode);
+                  int padT, int padW, int padH);
 
 TH_API void THNN_(VolumetricMaxUnpooling_updateOutput)(
                   THCState *state,
@@ -1188,3 +1184,4 @@ TH_API void THNN_(VolumetricReplicationPadding_updateGradInput)(
                   int pfront, int pback);
 
 #endif
+]]
